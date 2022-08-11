@@ -1190,18 +1190,16 @@
 			font-family: 'Passion One', cursive;
 			margin: 0;
 		}
-
-		#banner h3 {
+		#banner h2 {
 			color: #fff;
-			font-size: 3em;
+			font-size: 2em;
 			font-weight: 400;
 			font-family: 'Passion One', cursive;
 			margin: 0;
 		}
-
-		#banner h2 {
+		#banner h3 {
 			color: #fff;
-			font-size: 2em;
+			font-size: 3em;
 			font-weight: 400;
 			font-family: 'Passion One', cursive;
 			margin: 0;
@@ -1213,12 +1211,35 @@
 					font-size: 5em;
 				}
 
+				#banner h2 {
+					color: #fff;
+					font-size: 1em;
+					font-weight: 400;
+					font-family: 'Passion One', cursive;
+					margin: 0;
+				}
+				#banner h3 {
+					color: #fff;
+					font-size: 2em;
+					font-weight: 400;
+					font-family: 'Passion One', cursive;
+					margin: 0;
+				}
+
 			}
 
 			@media screen and (max-width: 736px) {
 
 				#banner h1 {
 					font-size: 3em;
+				}
+
+				#banner h2 {
+					font-size: 0.5em;
+				}
+
+				#banner h3 {
+					font-size: 1em;
 				}
 
 			}
