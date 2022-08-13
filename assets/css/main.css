@@ -1292,7 +1292,7 @@
 			white-space: nowrap;
 			width: 4em;
 			z-index: 2;
-			margin: 0 auto 2em auto;
+			margin: 0 auto 1em auto;
 		}
 
 			#banner .more:hover {
@@ -2185,4 +2185,8 @@ body.is-loading #skills:before {
 
 .topnav-right {
 	float: right;
+}
+
+.img-slide {
+	opacity: 0.5;
 }
