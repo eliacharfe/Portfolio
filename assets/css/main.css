@@ -942,6 +942,11 @@
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+
+		/*position: absolute;*/
+		/*right:    0;*/
+		/*position:relative;*/
+		/*bottom:   0;*/
 	}
 
 		input[type="submit"]:hover,
@@ -2190,3 +2195,4 @@ body.is-loading #skills:before {
 .img-slide {
 	opacity: 0.5;
 }
+
