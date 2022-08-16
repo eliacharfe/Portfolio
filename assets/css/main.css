@@ -930,7 +930,7 @@
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		background-color: #70c7be;
-		border-radius: 4px;
+		border-radius: 1.1rem;
 		border: 0;
 		color: #ffffff !important;
 		cursor: pointer;
