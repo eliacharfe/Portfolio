@@ -22,7 +22,8 @@
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
-			$window.on('load', function() {
+
+		$window.on('load', function() {
 				window.setTimeout(function() {
 					$body.removeClass('is-loading');
 				}, 100);
@@ -113,6 +114,91 @@
 				$window.trigger('scroll');
 			});
 
+		$( "#showmore" ).click(function() {
+			// $(this).find('.fa-eye,.fa-eye-slash').toggleClass('fa-eye').toggleClass('fa-eye-slash');
+			myModule.showMore();
+
+		});
+
 	});
 
+
 })(jQuery);
+
+
+const myModule = (() => {
+
+	const showMore = function () {
+		// let dateInp = querySelect("#date");
+		let div = querySelect("#plus");
+        let btn = querySelect("#showmore");
+		// let eye = querySelect("#eye");
+
+		if (div.classList.contains("d-none")) {
+			div.className = "d-block";
+			btn.innerHTML  = "Hide";
+			btn.className = "button style2 mb-4";
+			// eye.className = "fa fa-eye-slash";
+		} else {
+			div.className = "d-none";
+			btn.className = "button style mb-5";
+			btn.innerHTML  = "Show More";
+			// eye.className = "fa fa-eye";
+		}
+	}
+//----------------------------
+	/** for more readable syntax
+	 * @param container - get an #id
+	 * @returns {*} - returns selector with the particular id sent */
+	const querySelect = function (container) {
+		return document.querySelector(container);
+	}
+	//---------------------
+	/** set attribute to a DOM object
+	 * @param container - get an #id
+	 * @param qualName - get a qualified name (class, href, etc)
+	 * @param val - get the value we want to insert */
+	const setAttr = function (container, qualName, val) {
+		querySelect(container).setAttribute(qualName, val);
+	}
+	//--------------------------------------
+	/** add listeners to the save buttons of the DOM inserted photos (every card has a such button) */
+	const addListeners = function () {
+		let buttons = document.getElementsByClassName("btn btn-info ml-2 mr-2");
+		// for (let btn of buttons)
+		//     btn.addEventListener('click', saveImageToList);
+	}
+	//--------------------------------
+	/** creates a DOM element
+	 * @param node - a tag
+	 * @returns {*} - returns a created element with the particular tag sent */
+	const createNode = function (node) {
+		return document.createElement(node);
+	}
+	//-----------------
+	/** set the child and append him to the parent sent
+	 * @param parent - get the parent node
+	 * @param child - get the child node
+	 * @param nameClass - the class name we want to insert to the child
+	 * @param inner - the innerHTML we want to insert to the child */
+	const appendNode = function (parent, child, nameClass, inner) {
+		child.className = nameClass;
+		child.innerHTML = inner;
+		parent.appendChild(child);
+	}
+	//---------------------
+	/** reset errors to none errors */
+	const resetErrors = function () {
+		document.querySelectorAll(".is-invalid").forEach((e) => e.classList.remove("is-invalid"));
+		document.querySelectorAll(".errormessage").forEach((e) => e.innerHTML = "");
+	}
+	//-----------------------------
+
+	return {
+		showMore: showMore,
+		querySelect: querySelect,
+	}
+})();
+
+
+
