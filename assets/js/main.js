@@ -114,8 +114,10 @@
 				$window.trigger('scroll');
 			});
 
-		$( "#showmore" ).click(function() {
+		$( "#showmore, #showmore2" ).on('touchend  click', function(event) {
 			// $(this).find('.fa-eye,.fa-eye-slash').toggleClass('fa-eye').toggleClass('fa-eye-slash');
+			event.stopPropagation();
+			event.preventDefault();
 			myModule.showMore();
 
 		});
@@ -129,21 +131,25 @@
 const myModule = (() => {
 
 	const showMore = function () {
-		// let dateInp = querySelect("#date");
 		let div = querySelect("#plus");
         let btn = querySelect("#showmore");
-		// let eye = querySelect("#eye");
+        let btn2 = querySelect("#showmore2");
+        let btnArrow = querySelect("#more2");
+
 
 		if (div.classList.contains("d-none")) {
 			div.className = "d-block";
 			btn.innerHTML  = "Hide";
-			btn.className = "button style2 mb-4";
-			// eye.className = "fa fa-eye-slash";
+			btn.className = "button style2 mb-4 fit";
+			btnArrow.className = "more2";
+			btn2.className = "text-center scroll-down d-none";
+
 		} else {
 			div.className = "d-none";
-			btn.className = "button style mb-5";
+			btn.className = "button style mb-4 fit";
 			btn.innerHTML  = "Show More";
-			// eye.className = "fa fa-eye";
+			btnArrow.className = "more";
+			btn2.className = "text-center scroll-down d-block";
 		}
 	}
 //----------------------------
