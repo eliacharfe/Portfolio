@@ -2107,29 +2107,29 @@ body.is-loading #skills:before {
 }
 
 
-.more2 {
-	background-image: url("images/upArrow.png");
-	background-position: center 1.35em;
-	background-repeat: no-repeat;
-	background-size: auto;
-	border: 1px solid #fff;
-	border-radius: 100%;
-	color: rgba(255, 255, 255, 0.75);
-	display: block;
-	height: 4em;
-	text-indent: 4em;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 4em;
-	z-index: 2;
-	margin: 0 auto 2em auto;
-	stroke: none;
-}
-.more2:hover {
-	background-color: rgba(255, 255, 255, 0.05);
-	border: 1px solid #fff;
-	color: #FFF;
-}
+/*.more2 {*/
+/*	background-image: url("images/upArrow.png");*/
+/*	background-position: center 1.35em;*/
+/*	background-repeat: no-repeat;*/
+/*	background-size: auto;*/
+/*	border: 1px solid #fff;*/
+/*	border-radius: 100%;*/
+/*	color: rgba(255, 255, 255, 0.75);*/
+/*	display: block;*/
+/*	height: 4em;*/
+/*	text-indent: 4em;*/
+/*	overflow: hidden;*/
+/*	white-space: nowrap;*/
+/*	width: 4em;*/
+/*	z-index: 2;*/
+/*	margin: 0 auto 2em auto;*/
+/*	stroke: none;*/
+/*}*/
+/*.more2:hover {*/
+/*	background-color: rgba(255, 255, 255, 0.05);*/
+/*	border: 1px solid #fff;*/
+/*	color: #FFF;*/
+/*}*/
 
 
 
@@ -2272,7 +2272,7 @@ body.is-loading #skills:before {
 	opacity: 0.5;
 }
 
-#showmore{
-	z-index: 99;
-	cursor:pointer
-}
+/*#showmore{*/
+/*	z-index: 99;*/
+/*	cursor:pointer*/
+/*}*/
