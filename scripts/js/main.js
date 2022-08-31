@@ -148,7 +148,6 @@ const myModule = (() => {
         let btn2 = querySelect("#showmore2");
         let btnArrow = querySelect("#more2");
 
-
 		if (div.classList.contains("d-none")) {
 			div.className = "d-block";
 			btn.innerHTML  = "Hide";

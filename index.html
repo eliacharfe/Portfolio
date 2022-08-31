@@ -2,7 +2,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!--<link rel="shortcut icon" href="images/favicon.ico">-->
 <!--<link rel="shortcut icon" href="images/faviconpc.ico">-->
 <!--<link rel="shortcut icon" href="images/faviconme.ico">-->
@@ -27,7 +27,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <html>
@@ -44,7 +46,8 @@
                     <a class="nav-link active border_down" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link border_down" href="https://www.linkedin.com/in/eliachar-feig-55983165/" target="_blank">
+                    <a class="nav-link border_down" href="https://www.linkedin.com/in/eliachar-feig-55983165/"
+                       target="_blank">
                         Linkedin</a>
                 </li>
                 <li class="nav-item">
@@ -124,8 +127,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="scripts/css/main.css"/>
+    <link rel="stylesheet" href="scripts/css/_media.scss"/>
 </head>
-<body id="top">
+<body id="top" class="main-content">
 
 <section id="banner" data-video="images/background.gif">
     <div class="inner">
@@ -141,33 +145,6 @@
     </div>
 </section>
 
-<div class="controls">
-    <a href="#top">
-    <div class="control active-btn" data-id="home" >
-        <i class="fas fa-home"></i>
-    </div>
-    </a>
-    <a href="#about">
-    <div class="control" data-id="about">
-        <i class="fas fa-user"></i>
-    </div>
-    </a>
-    <a href="#main">
-    <div class="control" data-id="portfolio">
-        <i class="fas fa-briefcase"></i>
-    </div>
-    </a>
-    <a href="#skills">
-    <div class="control" data-id="skills">
-        <i class="far fa-newspaper"></i>
-    </div>
-    </a>
-    <a href="#footer">
-    <div class="control" data-id="contact">
-        <i class="fas fa-envelope-open"></i>
-    </div>
-    </a>
-</div>
 
 <div class="row" id="about">
     <div class="col">
@@ -185,12 +162,14 @@
             <div>
                 <img class="my_img-profile" src="images/profile.JPG" alt="profile" style="width:200px">
             </div>
+<!--                    </div>-->
+
+            <h3>My Resume </h3>
+            <span> <a href="/Resume - Eliachar Feig.pdf" class="border_down" download>
+               <img src="/images/download.png" alt="" width="40" height="40"></a>
+            </span>
+<!--                </label>-->
             <div>
-                <label>
-                    <h3>My Resume </h3>  <span> <a href="/Resume - Eliachar Feig.pdf" class="border_down" download>
-                <img src="/images/download.png" alt="" width="40" height="40"></a>
-                    </span>
-                </label>
                 <a href="#main" class="more mt-5">Learn More</a>
             </div>
         </div>
@@ -211,78 +190,98 @@
         <div class="thumbnails">
 
             <div class="box">
-                <a href="https://youtu.be/kyKP4AfDlYs" class="image fit">
-                    <img src="images/AssembleImage.png" alt=""/></a>
-                <div class="inner">
-                    <h3>Assemble Z' Army</h3>
-                    <p>Real-Time Strategy multiplayer game online made in Unity engine.
-                        Coding with C#, using Mirror library</p>
-                    <form action="https://github.com/eliacharfe/Assemble-Z-Army.git"
-                          method="get" target="_blank" class="mt-auto">
-                        <button class="button style2 fit" type="submit">Github</button>
-                    </form>
-                    <!--                    <button onclick="window.location.href='https://github.com/Shimshon21/Project-2022';"-->
-                    <!--                            class="button style2 fit">Github</button>-->
-                    <a href="https://youtu.be/kyKP4AfDlYs" class="button fit mt-auto" data-poptrox="youtube,800x400">Watch</a>
+                <div class="blogs">
+                    <div class="blog">
+
+                        <a href="https://youtu.be/kyKP4AfDlYs" class="image fit">
+                            <img src="images/AssembleImage.png" alt=""/></a>
+                        <div class="inner">
+                            <h3>Assemble Z' Army</h3>
+                            <p>Real-Time Strategy multiplayer game online made in Unity engine.
+                                Coding with C#, using Mirror library</p>
+                            <form action="https://github.com/eliacharfe/Assemble-Z-Army.git"
+                                  method="get" target="_blank" class="mt-auto">
+                                <button class="button style2 fit" type="submit">Github</button>
+                            </form>
+                            <!--                    <button onclick="window.location.href='https://github.com/Shimshon21/Project-2022';"-->
+                            <!--                            class="button style2 fit">Github</button>-->
+                            <a href="https://youtu.be/kyKP4AfDlYs" class="button fit mt-auto"
+                               data-poptrox="youtube,800x400">Watch</a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
             <div class="box">
-                <a href="https://youtu.be/QmwvMqvJRSU" class="image fit"><img src="images/BookStore.png" alt=""/></a>
-                <div class="inner">
-                    <h3>Book Store Website</h3>
-                    <p>A Book Store complete implementation responsive website using Spring Boot with Java
-                        at the Backend and JavaScript at the Frontend. The code uses Spring security, dealing
-                        with transactions, and the database is MySQL with APACHE Tomcat server via XAMPP</p>
+                <div class="blogs">
+                    <div class="blog">
+                        <a href="https://youtu.be/QmwvMqvJRSU" class="image fit"><img src="images/BookStore.png"
+                                                                                      alt=""/></a>
+                        <div class="inner">
+                            <h3>Book Store Website</h3>
+                            <p>A Book Store complete implementation responsive website using Spring Boot with Java
+                                at the Backend and JavaScript at the Frontend. The code uses Spring security, dealing
+                                with transactions, and the database is MySQL with APACHE Tomcat server via XAMPP</p>
 
-                    <form action="https://github.com/Solange-s-Courses/ex4-spring-neviim-eliachar-feig-1"
-                          method="get" target="_blank">
-                        <button class="button style2 fit" type="submit">Github</button>
-                    </form>
-                    <a href="https://youtu.be/QmwvMqvJRSU" class="button style3 fit"
-                       data-poptrox="youtube,800x400">Watch</a>
+                            <form action="https://github.com/Solange-s-Courses/ex4-spring-neviim-eliachar-feig-1"
+                                  method="get" target="_blank">
+                                <button class="button style2 fit" type="submit">Github</button>
+                            </form>
+                            <a href="https://youtu.be/QmwvMqvJRSU" class="button style3 fit"
+                               data-poptrox="youtube,800x400">Watch</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="box">
-                <a href="https://youtube/mfwwdH-bD9k" data-poptrox="youtube,800x400" class="image fit"><img
-                        src="images/Sonic.png" alt=""/></a>
-                <div class="inner">
-                    <h3>Sonic</h3>
-                    <p>Sonic Game coded with C++ at VS. The project was Object-Oriented Programming
-                        (OOP) and included the SFML library.</p>
-                    <!--                    <button onclick="window.location.href='https://github.com/eliacharfe/Sonic_GAME_OOP2_Project';"-->
-                    <!--                            class="button style2 fit" target="_blank">Github</button>-->
+                <div class="blogs">
+                    <div class="blog">
+                        <a href="https://youtube/mfwwdH-bD9k" data-poptrox="youtube,800x400" class="image fit"><img
+                                src="images/Sonic.png" alt=""/></a>
+                        <div class="inner">
+                            <h3>Sonic</h3>
+                            <p>Sonic Game coded with C++ at VS. The project was Object-Oriented Programming
+                                (OOP) and included the SFML library.</p>
+                            <!--                    <button onclick="window.location.href='https://github.com/eliacharfe/Sonic_GAME_OOP2_Project';"-->
+                            <!--                            class="button style2 fit" target="_blank">Github</button>-->
 
-                    <form action="https://github.com/eliacharfe/Sonic_GAME_OOP2_Project"
-                          method="get" target="_blank">
-                        <button class="button style2 fit" type="submit">Github</button>
-                    </form>
-                    <a href="https://youtube/mfwwdH-bD9k" class="button style3 fit"
-                       data-poptrox="youtube,800x400">Watch</a>
+                            <form action="https://github.com/eliacharfe/Sonic_GAME_OOP2_Project"
+                                  method="get" target="_blank">
+                                <button class="button style2 fit" type="submit">Github</button>
+                            </form>
+                            <a href="https://youtube/mfwwdH-bD9k" class="button style3 fit"
+                               data-poptrox="youtube,800x400">Watch</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
             <div class="box">
-                <a href="https://www.youtube.com/watch?v=vXjOUxHrgU0&ab_channel=%D7%90%D7%9C%D7%99%D7%A9%D7%A8%D7%A4%D7%99%D7%99%D7%92"
-                   data-poptrox="youtube,800x400"
-                   class="image fit"><img src="images/structure.png" alt=""/></a>
-                <div class="inner">
-                    <h3>HousEye - Raspberry-Pi Project</h3>
-                    <p>Know your home at real-time with HousEye, secure your home, and direct chat between
-                        family members. <br>
-                        <b>Backend:</b> Firebase Cloud Database, Python, Flask, OpenCV, PIL, Twilio<br>
-                        <b>Frontend:</b> JavaScript, HTML, CSS (Windows) <br>
-                        Raspberry-Pi, Python, OpenCV, Raspberry-Pi camera (Linux)
-                    </p>
+                <div class="blogs">
+                    <div class="blog">
+                        <a href="https://www.youtube.com/watch?v=vXjOUxHrgU0&ab_channel=%D7%90%D7%9C%D7%99%D7%A9%D7%A8%D7%A4%D7%99%D7%99%D7%92"
+                           data-poptrox="youtube,800x400"
+                           class="image fit"><img src="images/structure.png" alt=""/></a>
+                        <div class="inner">
+                            <h3>HousEye - Raspberry-Pi Project</h3>
+                            <p>Know your home at real-time with HousEye, secure your home, and direct chat between
+                                family members. <br>
+                                <b>Backend:</b> Firebase Cloud Database, Python, Flask, OpenCV, PIL, Twilio<br>
+                                <b>Frontend:</b> JavaScript, HTML, CSS (Windows) <br>
+                                Raspberry-Pi, Python, OpenCV, Raspberry-Pi camera (Linux)
+                            </p>
 
-                    <form action="https://github.com/ExcellentTeam22/raspberry-pi-houseye-eliachar-yaniv-orel-or.git"
-                          method="get" target="_blank">
-                        <button class="button style2 fit" type="submit">Github</button>
-                    </form>
-                    <a href="https://www.youtube.com/watch?v=vXjOUxHrgU0&ab_channel=%D7%90%D7%9C%D7%99%D7%A9%D7%A8%D7%A4%D7%99%D7%99%D7%92"
-                       class="button style fit" data-poptrox="youtube,800x400">Watch</a>
+                            <form action="https://github.com/ExcellentTeam22/raspberry-pi-houseye-eliachar-yaniv-orel-or.git"
+                                  method="get" target="_blank">
+                                <button class="button style2 fit" type="submit">Github</button>
+                            </form>
+                            <a href="https://www.youtube.com/watch?v=vXjOUxHrgU0&ab_channel=%D7%90%D7%9C%D7%99%D7%A9%D7%A8%D7%A4%D7%99%D7%99%D7%92"
+                               class="button style fit" data-poptrox="youtube,800x400">Watch</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -313,71 +312,87 @@
         <div class="thumbnails">
 
             <div class="box">
-                <a class="image fit"><img src="images/google.png" alt=""/></a>
-                <div class="inner">
-                    <h3>Google Autocomplete Project</h3>
-                    <p>Autocomplete Search Providing an autocomplete search for the user by developing an
-                        algorithm that takes into account possible spelling errors of the user. In addition,
-                        the algorithm takes into consideration memory and run-time limitations. Coded in Python.
-                    </p>
-                    <form action="https://github.com/ExcellentTeam22/google-project-group-8"
-                          method="get" target="_blank">
-                        <button class="button style2 fit" type="submit">Github</button>
-                    </form>
-                    <!--                    <a href="https://github.com/Shimshon21/Project-2022" class="button style2 fit">Github</a>-->
+                <div class="blogs">
+                    <div class="blog">
+                        <a class="image fit"><img src="images/google.png" alt=""/></a>
+                        <div class="inner">
+                            <h3>Google Autocomplete Project</h3>
+                            <p>Autocomplete Search Providing an autocomplete search for the user by developing an
+                                algorithm that takes into account possible spelling errors of the user. In addition,
+                                the algorithm takes into consideration memory and run-time limitations. Coded in Python.
+                            </p>
+                            <form action="https://github.com/ExcellentTeam22/google-project-group-8"
+                                  method="get" target="_blank">
+                                <button class="button style2 fit" type="submit">Github</button>
+                            </form>
+                            <!--                    <a href="https://github.com/Shimshon21/Project-2022" class="button style2 fit">Github</a>-->
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="box">
-                <a class="image fit"><img src="images/mars.jpg" alt=""/></a>
-                <div class="inner">
-                    <h3>NASA's Mars Photos Website Project</h3>
-                    <p>Manipulations on Mars photos using NASA API made with Node-js at the Backend and
-                        JavaScript at the Frontend. Uses sessions and user's Authentication. Database: Sqlite3.
-                    </p>
-                    <form action="https://github.com/eliacharfe/nasa-api"
-                          method="get" target="_blank">
-                        <button class="button style2 fit" type="submit">Github</button>
-                    </form>
+                <div class="blogs">
+                    <div class="blog">
+                        <a class="image fit"><img src="images/mars.jpg" alt=""/></a>
+                        <div class="inner">
+                            <h3>NASA's Mars Photos Website Project</h3>
+                            <p>Manipulations on Mars photos using NASA API made with Node-js at the Backend and
+                                JavaScript at the Frontend. Uses sessions and user's Authentication. Database: Sqlite3.
+                            </p>
+                            <form action="https://github.com/eliacharfe/nasa-api"
+                                  method="get" target="_blank">
+                                <button class="button style2 fit" type="submit">Github</button>
+                            </form>
 
-                    <form action="https://eliachar.herokuapp.com/"
-                          method="get" target="_blank">
-                        <button class="button style  fit" type="submit">Website</button>
-                    </form>
-                </div>
-            </div>
-
-
-            <div class="box">
-                <a class="image fit"><img src="images/MobilEyee.jpg" alt=""/></a>
-                <div class="inner">
-                    <h3>Mobileye Project</h3>
-                    <p>TFL Detection and Distance Estimation Detecting traffic lights within a given clip,
-                        estimating their distance from the vehicle using image processing technologies, Neural
-                        networks and SFM (Structure From Motion) for the distance estimation. Coded in Python.
-                    </p>
-                    <form action="https://github.com/eliacharfe/Mobileye-Traffic-Lights-Project.git"
-                          method="get" target="_blank">
-                        <button class="button style2 fit" type="submit">Github</button>
-                    </form>
+                            <form action="https://eliachar.herokuapp.com/"
+                                  method="get" target="_blank">
+                                <button class="button style  fit" type="submit">Website</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
             <div class="box">
-                <a class="image fit"><img src="images/react.png" alt=""/></a>
-                <div class="inner">
-                    <h3>Weather - React Project</h3>
-                    <p>Showing weather for 7 next days by input location and show a forecast image of the next days
-                        - using the 7timer! API. Coded with React.js
-                    </p>
-                    <form action="https://github.com/eliacharfe/React---weather-website.git"
-                          method="get" target="_blank">
-                        <button class="button style2 fit" type="submit">Github</button>
-                    </form>
+                <div class="blogs">
+                    <div class="blog">
+                        <a class="image fit"><img src="images/MobilEyee.jpg" alt=""/></a>
+                        <div class="inner">
+                            <h3>Mobileye Project</h3>
+                            <p>TFL Detection and Distance Estimation Detecting traffic lights within a given clip,
+                                estimating their distance from the vehicle using image processing technologies, Neural
+                                networks and SFM (Structure From Motion) for the distance estimation. Coded in Python.
+                            </p>
+                            <form action="https://github.com/eliacharfe/Mobileye-Traffic-Lights-Project.git"
+                                  method="get" target="_blank">
+                                <button class="button style2 fit" type="submit">Github</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+
+            <div class="box">
+                <div class="blogs">
+                    <div class="blog">
+                        <a class="image fit"><img src="images/react.png" alt=""/></a>
+                        <div class="inner">
+                            <h3>Weather - React Project</h3>
+                            <p>Showing weather for 7 next days by input location and show a forecast image of the next
+                                days
+                                - using the 7timer! API. Coded with React.js
+                            </p>
+                            <form action="https://github.com/eliacharfe/React---weather-website.git"
+                                  method="get" target="_blank">
+                                <button class="button style2 fit" type="submit">Github</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <div class="image-center center-text-align">
@@ -519,6 +534,47 @@
 
 </div>
 
+
+
+<div class="controls">
+    <a href="#top">
+        <div class="control active-btn" data-id="home">
+            <i class="fas fa-home"></i>
+        </div>
+    </a>
+    <a href="#about">
+        <div class="control" data-id="about">
+            <i class="fas fa-user"></i>
+        </div>
+    </a>
+    <a href="#main">
+        <div class="control" data-id="portfolio">
+            <i class="fas fa-briefcase"></i>
+        </div>
+    </a>
+    <a href="#skills">
+        <div class="control" data-id="skills">
+            <i class="far fa-newspaper"></i>
+        </div>
+    </a>
+    <a href="#footer">
+        <div class="control" data-id="contact">
+            <i class="fas fa-envelope-open"></i>
+        </div>
+    </a>
+</div>
+<div class="theme-btn">
+    <i class="fas fa-adjust"></i>
+</div>
+
+<div class="text-center" style="margin-right:auto; margin-left:auto;">
+    <!--                <label>-->
+    <!--                    <div class="col-2">-->
+    <a href="/Resume - Eliachar Feig.pdf" class="main-btn mb-5" download>
+        <span class="btn-text">Download CV</span>
+        <span class="btn-icon"><i class="fas fa-download"></i></span>
+    </a>
+</div>
 
 <!-- Footer -->
 <footer id="footer">
