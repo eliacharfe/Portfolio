@@ -140,6 +140,15 @@
 
 		}
 
+.border_down {
+	border-bottom: 1px dotted;
+}
+
+.border_down:hover{
+	color: #FFF;
+	border: none;
+}
+
 	a {
 		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -147,7 +156,7 @@
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		color: rgba(255, 255, 255, 0.75);
 		text-decoration: none;
-		border-bottom: 1px dotted;
+		/*border-bottom: 1px dotted;*/
 		outline: 0;
 	}
 
