@@ -147,6 +147,7 @@ const myModule = (() => {
         let btn = querySelect("#showmore");
         let btn2 = querySelect("#showmore2");
         let btnArrow = querySelect("#more2");
+		let moreId = querySelect("#up");
 
 		if (div.classList.contains("d-none")) {
 			div.className = "d-block";
@@ -154,7 +155,7 @@ const myModule = (() => {
 			btn.className = "button style2 mb-4 fit";
 			btnArrow.className = "more2";
 			btn2.className = "text-center scroll-down d-none";
-
+            moreId.click();
 		} else {
 			div.className = "d-none";
 			btn.className = "button style mb-4 fit";
